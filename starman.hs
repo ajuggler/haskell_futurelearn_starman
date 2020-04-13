@@ -37,12 +37,3 @@ starman n =
      rndm <- randomRIO (0, length thewords - 1)
      let word = thewords !! rndm
      turn word ['_' | x <- word] n
-
---chooseWord :: IO String
---chooseWord =
---  do handle <- openFile "lista_de_palabras.txt" ReadMode
---     contents <- hGetContents handle
---     let thewords = words contents
---     rndm <- randomRIO (0, length thewords - 1)
---     putStrLn (thewords !! rndm)
-
